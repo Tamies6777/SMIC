@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ESP IoT Firebase DASH</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300&family=Josefin+Sans:wght@500&family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <title>SMIC</title>
+
+    <!-- update the version number as needed -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+
+    <!-- include only the Firebase features as you need -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/2.1.7/all/gauge.min.js"></script>
+
+
+    <script>
+     // REPLACE WITH YOUR web app's Firebase configuration
+     const firebaseConfig = {
+
+      };
+
+      // Initialize firebase
+      firebase.initializeApp(firebaseConfig);
+
+      // Make auth and database references
+      const auth = firebase.auth();
+      const db = firebase.database();
+
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<!-- Header -->
+<header>
+  <a href="" class="logo">S.M.I.C</a>
+
+  <ul class="navbar">
+     <li><a href="../index.html">Início</a></li>
+     <li><a href="../Compostagem/index.html">Compostagem</a></li>
+     <li><a href="../Nos/index.html">Equipe</a></li>
+     <li><a href="../Dashboard/index.html">Dashboard</a></li>
+     <li><a href="../Login Page/index.html" style="color:  #ffa343; font-weight: bold;">Entrar</a></li>
+  </ul>
+
+  <div class="h-right">
+     <a href="#"><i class="ri-instagram-fill"></i></a>
+     <a href="#"><i class="ri-youtube-fill"></i></a>
+     <div class="bx bx-menu" id="menu-icon"></div>
+  </div>
+</header>
+
+ <!-- Home -->
+ <section class="home">
+  <div class="home-text">
+     <h5>S.M.I.C</h5>
+     <h1>DASHBOARD</h1>
+     <p>Confira aqui o monitoramento da sua composteira. <br>
+      Há também gráficos mostrando os níveis dos parâmetros.</ps>
+  </div>
+</section>
+
+<body>
+  <section class="title">
+    <p>Monitore sua composteira</p>
+  </section>
+
+  <!--Leitor dos Sensores-->
+  <div class="top">
+  <div class="content-sign-in" id="content-sign-in">
+
+    <div class="cards">
+      <!--TEMPERATURA-->
+      <div class="card">
+        <p><i class="fas fa-thermometer-half" style="color:#e72b3b;"></i> TEMPERATURA</p>
+        <p><span class="reading"><span id="temp"></span>22.1 &deg;C</span></p>
+      </div>
+      <!--HUMIDADE-->
+      <div class="card">
+        <p><i class="fas fa-tint" style="color:#00add6;"></i> UMIDADE</p>
+        <p><span class="reading"><span id="hum"></span>1 &percnt;</span></p>
+      </div>
+      <!--GAS-->
+      <div class="card">
+        <p><i class="fas fa-fire" style="color:#e47637;"></i> GÁS</p>
+        <p><span class="reading"><span id="gas"></span>0 &percnt;</span></p>
+      </div>
+       <!--Chorume-->
+      <div class="card" >
+        <p><i class="fas fa-trash" style="color:#44c32d;"></i> CHORUME</p>
+        <p><span class="reading"><span id="cho"></span>0 &#13206;</span></p>
+      </div>
+    </div>
+     <br><br>
+
+   
+  </div>
+</div>
+
+ <!-- Footer -->
+ <section class="footer">
+  <div class="footer-box">
+     <h3>Services</h3>
+     <a href="">E-mail Marketing</a>
+     <a href="">Campaigns</a>
+     <a href="">Brandings</a>
+     <a href="">Offline</a>
+  </div>
+
+  <div class="footer-box">
+     <h3>About</h3>
+     <a href="">Our Story</a>
+     <a href="">Benefits</a>
+     <a href="">Team</a>
+     <a href="">Carrers</a>
+  </div>
+
+  <div class="footer-box">
+     <h3>Help</h3>
+     <a href="">FAQs</a>
+     <a href="">Contact Us</a>
+  </div>
+
+  <div class="footer-box">
+     <h3>Social</h3> 
+     <div class="social">
+        <a href="https://www.instagram.com/smic.tcc/"><i class="ri-instagram-fill"></i></a>
+        <a href="https://youtu.be/aX7DQvfV29I?si=0_kcZoo5P-KIjjNC"><i class="ri-youtube-fill"></i></a>
+     </div>
+  </div>
+</section>
+
+<!-- copyright -->
+<div class="copyright">
+  <p>Cpyright 2023 By S.M.I.C</p>
+</div>
+
+  <script src="scripts/script.js"></script>
+  <script src="scripts/index.js"></script>
+  <script src="scripts/auth.js"></script>
+  <script src="scripts/charts-definitions.js"></script>
+  </body>
+</html>

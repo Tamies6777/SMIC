@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNUP</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("fundo_sign.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        .box {
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.639);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            border-radius: 25px;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.639);
+            box-shadow: 3px 3px 1px 0px #00000060;
+        }
+        
+        .inputBox {
+            position: relative;
+            color: rgb(0, 65, 0);
+        }
+        
+        .inputUser {
+            font-weight: bold;
+            background: none;
+            border: none;
+            border-bottom: 1px solid rgb(30, 105, 30);
+            outline: none;
+            color: rgb(0, 65, 0);
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 0.1px;
+        }
+        
+        .labelInput {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: 0.5s;
+            color: rgb(5, 60, 5);
+        }
+        
+        .inputUser:focus~.labelInput,
+        .inputUser:valid~.labelInput {
+            top: -20px;
+            font-size: 12px;
+            color: rgb(5, 60, 5);
+        }
+        
+        #data_nascimento {
+            border: none;
+            padding: 5px;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+            color: rgb(5, 60, 5);
+        }
+        
+        #submit {
+            background-color: rgb(255, 255, 255);
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 60px;
+            color: rgb(5, 60, 5);
+            font-size: 15px;
+            margin-top: 20px;
+            transition: all.5s ease-out;
+        }
+        
+        #submit:hover {
+            background-color: rgb(30, 105, 30);
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <form action="config.php" method="post">
+            <div class="inputBox">
+                <input type="text" name="nome" id="nome" class="inputUser" required>
+                <label for="nome" class="labelInput">Nome</label>
+            </div>
+            <br><br>
+            <div class="inputBox">
+                <input type="text" name="email" id="email" class="inputUser" required>
+                <label for="email" class="labelInput">Email</label>
+            </div>
+            <br><br>
+            <div class="inputBox">
+                <input type="password" name="senha" id="senha" class="inputUser" required>
+                <label for="senha" class="labelInput">Senha</label>
+            </div>
+            <br><br>
+            <div class="inputBox">
+                <input type="number" name="telefone" id="telefone" class="inputUser" required>
+                <label for="telefone" class="labelInput">Telefone</label>
+            </div>
+            <br><br>
+            <div class="inputBox">
+                <label for="data_nascimento">Data/Nascimento:</label>
+                <input type="date" name="data_nascimento" id="data_nascimento" required>
+            </div>
+            <br><br><br>
+            <div class="inputBox">
+                <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                <label for="cidade" class="labelInput">Cidade</label>
+            </div>
+            <br><br>
+            <div class="inputBox">
+                <input type="number" name="cpf" id="cpf" class="inputUser" required>
+                <label for="cpf" class="labelInput">CPF</label>
+            </div>
+            <br><br>
+            <input type="submit" name="submit" id="submit">
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>

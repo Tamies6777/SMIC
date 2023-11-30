@@ -1,0 +1,90 @@
+/* Estilos gerais */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+/* Estilos do velocímetro */
+.velocimetro {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	border: 2px solid #000;
+	border-radius: 50%;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+.indicador {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 2px;
+	height: 100px;
+	background-color: #f00;
+	transform-origin: bottom;
+	transform: translate(-50%) rotate(0deg);
+	transition: transform 1s ease;
+}
+
+.marcadores {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(0deg);
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	background-color: #fff;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.marcador {
+	position: absolute;
+	width: 6px;
+	height: 16px;
+	background-color: #000;
+	transform-origin: bottom;
+}
+
+.marcador:nth-child(1) {
+	transform: rotate(0deg) translateY(-70px);
+}
+
+.marcador:nth-child(2) {
+	transform: rotate(36deg) translateY(-70px);
+}
+
+.marcador:nth-child(3) {
+	transform: rotate(72deg) translateY(-70px);
+}
+
+.marcador:nth-child(4) {
+	transform: rotate(108deg) translateY(-70px);
+}
+
+.marcador:nth-child(5) {
+	transform: rotate(144deg) translateY(-70px);
+}
+
+.marcador:nth-child(6) {
+	transform: rotate(180deg) translateY(-70px);
+}
+
+.marcador:nth-child(7) {
+	transform: rotate(216deg) translateY(-70px);
+}
+
+.marcador:nth-child(8) {
+	transform: rotate(252deg) translateY(-70px);
+}
+
+.marcador:nth-child(9) {
+	transform: rotate(288deg) translateY(-70px);
+}
+
+.marcador:nth-child

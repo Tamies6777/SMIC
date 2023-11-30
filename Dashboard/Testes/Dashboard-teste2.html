@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard com Gráfico de Velocímetro</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="dashboard">
+		<div class="grafico">
+			<div class="velocimetro">
+				<div class="indicador"></div>
+				<div class="marcadores">
+					<div class="marcador"></div>
+					<div class="marcador"></div>
+					<div class="marcador"></div>
+					<div class="marcador"></div>
+					<div class="marcador"></div>
+					<div class="marcador"></div>
+					<div class="marcador"></div>
+					<div class="marcador"></div>
+					<div class="marcador"></div>
+					<div class="marcador"></div>
+				</div>
+			</div>
+		</div>
+		<div class="dados">
+			<div class="valor">
+				<span id="valor_atual">0</span> km/h
+			</div>
+			<div class="controles">
+				<button onclick="aumentarVelocidade()">Aumentar Velocidade</button>
+				<button onclick="diminuirVelocidade()">Diminuir Velocidade</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
